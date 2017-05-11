@@ -1,0 +1,25 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "A personal website",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FMcIntosh/personal-website.git"
+  },
+  "author": "Fraser McIntosh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FMcIntosh/personal-website/issues"
+  },
+  "homepage": "https://github.com/FMcIntosh/personal-website#readme",
+  "dependencies": {
+    "next": "^2.3.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  }
+}
