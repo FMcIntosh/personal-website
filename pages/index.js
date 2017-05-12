@@ -1,3 +1,10 @@
+import styled from 'styled-components';
+
+import Title from '../components/Title';
+
+
+
 export default () => (
-  <p>Welcome to Next.js!</p>
+    <Title>Hello World, this is my first styled component!</Title>
 )
+

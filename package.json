@@ -18,8 +18,11 @@
   },
   "homepage": "https://github.com/FMcIntosh/personal-website#readme",
   "dependencies": {
-    "next": "^2.3.1",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "babel-plugin-styled-components": "^1.1.4",
+    "babel-preset-stage-0": "^6.24.1",
+    "next": "latest",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "styled-components": "^2.0.0-17"
   }
 }
