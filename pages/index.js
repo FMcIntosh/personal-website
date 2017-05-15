@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
+import Background from '~/components/Background';
 import Title from '~/components/Title';
 
-
-
 export default () => (
-    <Title>Hello World, this is my first styled component!</Title>
+    <Background dark>
+        <Title>Hello World, this is my first styled component!</Title>
+    </Background>
 )
 
