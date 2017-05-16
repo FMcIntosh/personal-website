@@ -18,6 +18,7 @@ export default class MyDocument extends Document {
                 margin: 0;
             }
           `}</style>
+          <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
         </Head>
         <body>
           <div className='root'>

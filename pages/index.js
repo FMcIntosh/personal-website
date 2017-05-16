@@ -5,7 +5,9 @@ import Title from '~/components/Title';
 
 export default () => (
     <Background dark>
-        <Title>Hello World, this is my first styled component!</Title>
+        <Title>Fraser McIntosh is...</Title>
     </Background>
 )
+
+
 
