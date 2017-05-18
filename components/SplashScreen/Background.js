@@ -6,7 +6,6 @@ export default styled.div`
     height: 85vh;
     position: absolute;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
     background: ${props => props.light ? darkGrey : black};

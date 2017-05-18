@@ -7,7 +7,6 @@ export default (props) => (
     </Wrapper>
 );
 
-const width = 10;
 
 const MenuItem =  styled.a`
   color: white;
@@ -19,6 +18,7 @@ const MenuItem =  styled.a`
   }
 `;
 
+const width = 8;
 const Wrapper = styled.div`
     border-radius: 50%;
     width: ${width}em;
@@ -26,12 +26,14 @@ const Wrapper = styled.div`
     padding-top: calc(${width}em / 2);
     padding-bottom: calc(${width}em / 2);
     background: rgba(255,255,255, 0.05);   
-    margin: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 
     &:hover {
-        background: green;
+        background: rgba(255,255,255, 0.1);
+        cursor: pointer;
   }
 `;

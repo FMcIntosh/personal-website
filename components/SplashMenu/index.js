@@ -13,7 +13,7 @@ export default () => (
 const Wrapper = styled.div`
     display: flex;
     align-items: center;
-    width: calc(20em + 80px);
+    width: calc(16em + 60px);
     flex-wrap: wrap;
 `
 
