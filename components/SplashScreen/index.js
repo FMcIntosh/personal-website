@@ -8,7 +8,7 @@ import StyledScrollButton from './StyledScrollButton';
 export default () => (
     <div>
         <Background light>
-            <Title>Fraser McIntosh is...</Title>
+            <Title>Fraser McIntosh</Title>
             <Menu />
             <StyledScrollButton scrollElement="myScrollToElement" />
         </Background>

@@ -4,13 +4,13 @@ import SectionTitle from './SectionTitle';
 import SectionIcon from './SectionIcon';
 import DisplayItem from './DisplayItem';
 
-export default (props) => (
-    <Wrapper dark={props.dark}>
-     <SectionTitle>Developing</SectionTitle>
+export default ({ dark }) => (
+    <Wrapper dark={dark}>
+     <SectionTitle dark={dark}>Developing</SectionTitle>
      <SectionIcon src="https://d30y9cdsu7xlg0.cloudfront.net/png/62495-200.png"/>
-     <DisplayItem dark={props.dark}/>
-     <DisplayItem dark={props.dark}/>
-     <DisplayItem dark={props.dark}/>
+     <DisplayItem dark={dark} />
+     <DisplayItem dark={dark} />
+     <DisplayItem dark={dark} />
     </Wrapper>
 );
 
