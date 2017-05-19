@@ -16,6 +16,7 @@ export default class MyDocument extends Document {
                 width: 100%;
                 height: 100%;
                 margin: 0;
+                font-family: Roboto, sans-serif;
             }
           `}</style>
           <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
