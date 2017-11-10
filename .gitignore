@@ -1,15 +1,21 @@
-#build output
+# build output
 dist
 .next
 
-#dependencies
+# dependencies
 node_modules
+package-lock.json
 
-#logs
-npm-debug.log
+# logs
+*.log
 
-#coverage
+# coverage
 .nyc_output
 coverage
 
+# test output
+test/**/out
 .DS_Store
+
+#vscode
+.vscode

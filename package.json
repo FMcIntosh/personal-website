@@ -1,7 +1,8 @@
 {
-  "name": "personal-website",
+  "name": "voting-personality",
   "version": "1.0.0",
-  "description": "A personal website",
+  "description": "A web app to predict voting habits in the 2017 New Zealand general elections from their 'Big-Five' personality traits",
+  "main": "index.js",
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -9,24 +10,26 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FMcIntosh/personal-website.git"
+    "url": "git+https://github.com/FMcIntosh/voting-personality.git"
   },
   "author": "Fraser McIntosh",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/FMcIntosh/personal-website/issues"
+    "url": "https://github.com/FMcIntosh/voting-personality/issues"
   },
-  "homepage": "https://github.com/FMcIntosh/personal-website#readme",
+  "homepage": "https://github.com/FMcIntosh/voting-personality#readme",
   "dependencies": {
-    "babel-plugin-styled-components": "^1.1.4",
-    "babel-preset-stage-0": "^6.24.1",
-    "next": "latest",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-scroll": "^1.5.2",
-    "styled-components": "^2.0.0-17"
+    "babel-plugin-module-resolver": "^2.7.1",
+    "material-ui": "^1.0.0-beta.11",
+    "next": "^3.2.2",
+    "next-redux-wrapper": "^1.3.4",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "styled-components": "^2.1.2"
   },
   "devDependencies": {
-    "babel-plugin-root-import": "^5.1.0"
+    "redux-devtools-extension": "^2.13.2"
   }
 }
