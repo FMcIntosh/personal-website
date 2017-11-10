@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Title, Paragraph } from 'components/Text';
-import Button from 'material-ui/Button';
+import Button from 'components/Button';
 import { primary, lightPrimary } from 'styles/colors';
 import { submit } from 'data/store';
 import Page from 'hoc/Page';
@@ -14,7 +14,14 @@ const text2 = "Here's your chance to see if your personality might have influenc
 
 
 const Index = () => (
-  <Button>hello</Button>
+  <Background>
+    <Wrapper>
+      <Title light>Guess My Vote</Title>
+      <Paragraph light>{text1}</Paragraph> 
+      <Paragraph light>{text2}</Paragraph>        
+      <Button href="/personality">Get Started!</Button>
+    </Wrapper>
+  </Background>
 );
 
 export default Page(Index);
