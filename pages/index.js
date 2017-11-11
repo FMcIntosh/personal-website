@@ -6,23 +6,12 @@ import { primary, lightPrimary } from 'styles/colors';
 import { submit } from 'data/store';
 import Page from 'hoc/Page';
 
-const text1 = "Ever wondered if your personality influences who you vote for? Research into "
-+ "the link between personality and voting has shown that there is correlation between big five personality"
-+ " and who you vote for";
-
-const text2 = "Here's your chance to see if your personality might have influenced who you gave your vote to in New Zealand's 2017 general election"
-
-
-const Index = () => (
-  <Background>
-    <Wrapper>
-      <Title light>Guess My Vote</Title>
-      <Paragraph light>{text1}</Paragraph> 
-      <Paragraph light>{text2}</Paragraph>        
-      <Button href="/personality">Get Started!</Button>
-    </Wrapper>
-  </Background>
-);
+const Index = (props) => {
+  console.log(props);
+      return (
+      <Title light>Guess My Vote</Title>   
+      )   
+};
 
 export default Page(Index);
 
