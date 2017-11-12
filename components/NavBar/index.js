@@ -38,12 +38,9 @@ class BasicTabs extends React.Component {
           <Tabs centered  fullWidth value={value} onChange={this.handleChange}>
             <Tab label="Projects" />
             <Tab label="Blog" />
-            <Tab label="Item Three" href="#basic-tabs" />
+            <Tab label="Interest Feed" />
           </Tabs>
         </AppBar>
-        {value === 0 && <TabContainer>Item One</TabContainer>}
-        {value === 1 && <TabContainer>Item Two</TabContainer>}
-        {value === 2 && <TabContainer>Item Three</TabContainer>}
       </div>
     );
   }

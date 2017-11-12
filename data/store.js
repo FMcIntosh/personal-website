@@ -1,26 +1,29 @@
 import { createStore, applyMiddleware, compose } from 'redux';
-
 import { devToolsEnhancer } from 'redux-devtools-extension';
 
+// Initial State
 const initialState = {
-  personality: {}
+  page: "projects"
 }
 
+// Action Types
 export const actionTypes = {
-  SUBMIT: 'SUBMIT'
+  CHANGE_PAGE: 'CHANGE_PAGE'
 }
 
+// Reducers
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case actionTypes.SUBMIT:
-      return Object.assign({}, state, { personality: action.personality })
+    case actionTypes.CHANGE_PAGE:
+      return Object.assign({}, state, { page: action.page })
     default:
       return state
   }
 }
 
-export const submit = (personality) => {
-  return { type: actionTypes.SUBMIT, personality: personality }
+// Action Dispatchers
+export const submit = (page) => {
+  return { type: actionTypes.CHANGE_PAGE, page: page }
 }
 // create a store creator
 export const makeStore = (initialState) => {
