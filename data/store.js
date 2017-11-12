@@ -1,9 +1,10 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import { devToolsEnhancer } from 'redux-devtools-extension';
+import Pages from './pages';
 
 // Initial State
 const initialState = {
-  page: "projects"
+  page: Pages.PROJECTS
 }
 
 // Action Types
@@ -22,9 +23,10 @@ const reducer = (state = initialState, action) => {
 }
 
 // Action Dispatchers
-export const submit = (page) => {
+export const changePage = (page) => {
   return { type: actionTypes.CHANGE_PAGE, page: page }
 }
+
 // create a store creator
 export const makeStore = (initialState) => {
   return createStore(reducer, initialState, devToolsEnhancer())

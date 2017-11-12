@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import AppBar from 'material-ui/AppBar';
 import Tabs, { Tab } from 'material-ui/Tabs';
-
+import { changePage } from 'data/store';
+import { connect } from 'react-redux';
+import Pages from 'data/pages';
+ 
 function TabContainer(props) {
   return <div style={{ padding: 8 * 3 }}>{props.children}</div>;
 }
@@ -24,8 +27,11 @@ class BasicTabs extends React.Component {
     value: 0,
   };
 
+  pages = [Pages.PROJECTS, Pages.BLOG, Pages.INTEREST_FEED];
+
   handleChange = (event, value) => {
     this.setState({ value });
+    this.props.dispatch(changePage(this.pages[value].slug));
   };
 
   render() {
@@ -36,9 +42,11 @@ class BasicTabs extends React.Component {
       <div className={classes.root}>
         <AppBar position="static">
           <Tabs centered  fullWidth value={value} onChange={this.handleChange}>
-            <Tab label="Projects" />
-            <Tab label="Blog" />
-            <Tab label="Interest Feed" />
+            {this.pages.map(page => (
+             <Tab 
+              label={page.label} 
+              key={page.label}/>
+            ))}
           </Tabs>
         </AppBar>
       </div>
@@ -50,4 +58,6 @@ BasicTabs.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(BasicTabs);
+const TabsWithStyles = withStyles(styles)(BasicTabs);
+
+export default connect()(TabsWithStyles);
