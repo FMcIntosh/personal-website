@@ -7,7 +7,8 @@ import { primary, lightPrimary } from 'styles/colors';
 import { submit } from 'data/store';
 import Page from 'hoc/Page';
 
-const Index = () => {
+const Index = ({ store }) => {
+      console.log(store);
       return (
         <div>
           <Background>
@@ -18,6 +19,10 @@ const Index = () => {
           
       )   
 };
+
+Index.getInitialProps = (props) => {
+  console.log(props)
+}
 
 export default Page(Index);
 
