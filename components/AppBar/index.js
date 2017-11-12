@@ -4,6 +4,7 @@ import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
 import { withTheme } from 'material-ui/styles';
+import Tabs, { Tab } from 'material-ui/Tabs';
 
 const MyAppBar = ({ theme, children }) => {
   const lightPrimaryText = theme.palette.primary[100];

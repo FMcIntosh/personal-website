@@ -2,14 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 import { Title, Paragraph } from 'components/Text';
 import Button from 'components/Button';
+import NavBar from 'components/NavBar';
 import { primary, lightPrimary } from 'styles/colors';
 import { submit } from 'data/store';
 import Page from 'hoc/Page';
 
-const Index = (props) => {
-  console.log(props);
+const Index = () => {
       return (
-      <Title light>Guess My Vote</Title>   
+        <div>
+          <Background>
+            <Title light>Guess My Vote</Title>
+          </Background>
+          <NavBar />
+        </div>
+          
       )   
 };
 
@@ -17,7 +23,7 @@ export default Page(Index);
 
 const Background = styled.div`
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     position: relative;
     flex-direction: column;
