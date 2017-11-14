@@ -1,21 +1,29 @@
 import React, { Component } from 'react';
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
-import indigo from 'material-ui/colors/indigo';
-import orange from 'material-ui/colors/orange';
-import red from 'material-ui/colors/red';
+import primary from 'material-ui/colors/blueGrey';
+import secondary from 'material-ui/colors/red';
+import error from 'material-ui/colors/red';
 
 const decorator = (ComposedComponent) => {
 
   const theme = createMuiTheme({
     palette: {
-      primary: red,
-      secondary: {
-        ...indigo,
-        A200: '#536dfe',
-      },
-      error: red,
+      primary: primary,
+      secondary: secondary,
+      error: error,
     },
   });
+
+  // const theme = createMuiTheme({
+  //   palette: {
+  //     primary: primary,
+  //     secondary: {
+  //       ...indigo,
+  //       A200: '#536dfe',
+  //     },
+  //     error: red,
+  //   },
+  // });
 
   return class extends Component {
 
