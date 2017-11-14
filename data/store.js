@@ -4,7 +4,7 @@ import Pages from './pages';
 
 // Initial State
 const initialState = {
-  page: Pages.PROJECTS
+  page: Pages.PROJECTS.slug
 }
 
 // Action Types
