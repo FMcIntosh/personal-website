@@ -8,6 +8,7 @@ import { submit } from 'data/store';
 import Page from 'hoc/Page';
 import Pages from 'data/pages';
 import Splash from 'components/Splash';
+import { withTheme } from 'material-ui/styles';
 
 const Index = (props) => {
   console.log(props);
@@ -17,6 +18,7 @@ const Index = (props) => {
         <Title light>Fraser McIntosh</Title>
       </Splash>
       <NavBar />
+      <Background />
       
     </div>
       
@@ -30,15 +32,15 @@ const mapStateToProps = (state) => {
 
 export default Page(Index, mapStateToProps);
 
-const Background = styled.div`
+const Background = withTheme()(styled.div`
     width: 100%;
     min-height: 70vh;
     display: flex;
     position: relative;
     flex-direction: column;
     align-items: center;
-    background: ${primary};
-`
+    background: ${props => props.theme.palette.primary[500]};
+`)
 const Wrapper = styled.div`
   width: 60%;
   display: flex;

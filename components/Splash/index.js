@@ -43,6 +43,7 @@ const Pop = withTheme()(styled.h3`
 const SubPop = withTheme()(styled.h2`
   margin: 0;
   margin-top: -10px;
+  margin-left: -2px;
   font-size: 80px;
   letter-spacing: 5px;
   color: ${props => 0 ? "white" : props.theme.palette.secondary[200]};
