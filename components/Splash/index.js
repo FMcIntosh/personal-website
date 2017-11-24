@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { withTheme } from 'material-ui/styles';
+import IconButton from 'material-ui/IconButton';
+import DownIcon from 'material-ui-icons/ExpandMore';
 
 const Background = withTheme()(styled.div`
   max-width: 100%;
@@ -12,7 +14,7 @@ const Background = withTheme()(styled.div`
 `)
 const MainSection = withTheme()(styled.div`
   display: flex;
-  height: 85vh;
+  height: 90vh;
 `)
 
 const Title = withTheme()(styled.h2`
@@ -86,6 +88,10 @@ const Span = withTheme()(styled.span`
 
 const Footer = styled.div`
   max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
 `
 const FooterText = withTheme()(styled.h4`
   color: ${props => props.theme.palette.primary[200]};
@@ -113,7 +119,9 @@ const Splash = ({ theme }) => {
         </RightBlock>
       </MainSection>
       <Footer>
-        <FooterText>Come and see</FooterText>
+        <IconButton color="accent" aria-label="Expand-More">
+          <DownIcon />
+        </IconButton>
       </Footer>
     </Background>
   )

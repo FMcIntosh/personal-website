@@ -11,13 +11,11 @@ import Splash from 'components/Splash';
 import { withTheme } from 'material-ui/styles';
 
 const Index = (props) => {
-  console.log(props);
   return (
     <div>
       <Splash>
         <Title light>Fraser McIntosh</Title>
       </Splash>
-      <NavBar />
       <Background />
       
     </div>
@@ -26,7 +24,6 @@ const Index = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log(state.page);
   return { page: state.page }
 }
 
@@ -34,12 +31,12 @@ export default Page(Index, mapStateToProps);
 
 const Background = withTheme()(styled.div`
     width: 100%;
-    min-height: 70vh;
+    min-height: 100vh;
     display: flex;
     position: relative;
     flex-direction: column;
     align-items: center;
-    background: ${props => props.theme.palette.primary[500]};
+    background: white;
 `)
 const Wrapper = styled.div`
   width: 60%;
