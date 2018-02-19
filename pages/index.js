@@ -9,35 +9,35 @@ import Page from 'hoc/Page';
 import Pages from 'data/pages';
 import Splash from 'components/Splash';
 import { withTheme } from 'material-ui/styles';
+import Project from 'components/Project';
 
-const Index = (props) => {
+const Index = props => {
   return (
     <div>
       <Splash>
         <Title light>Fraser McIntosh</Title>
       </Splash>
       <Background />
-      
+      <Project />
     </div>
-      
-  )   
+  );
 };
 
-const mapStateToProps = (state) => {
-  return { page: state.page }
-}
+const mapStateToProps = state => {
+  return { page: state.page };
+};
 
 export default Page(Index, mapStateToProps);
 
 const Background = withTheme()(styled.div`
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-    background: white;
-`)
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+`);
 const Wrapper = styled.div`
   width: 60%;
   display: flex;
@@ -48,7 +48,7 @@ const Wrapper = styled.div`
 		width: 90%;
 	}
 }
-`
+`;
 const Content = styled.div`
   max-width: 100%;
   height: 300px;
@@ -56,5 +56,5 @@ const Content = styled.div`
   color: white;
   text-align: center;
   font-size: 30px;
-  background: #BDBDBD;
-`
+  background: #bdbdbd;
+`;

@@ -4,14 +4,13 @@ import primary from 'material-ui/colors/blueGrey';
 import secondary from 'material-ui/colors/red';
 import error from 'material-ui/colors/red';
 
-const decorator = (ComposedComponent) => {
-
+const decorator = ComposedComponent => {
   const theme = createMuiTheme({
     palette: {
       primary: primary,
       secondary: secondary,
-      error: error,
-    },
+      error: error
+    }
   });
 
   // const theme = createMuiTheme({
@@ -26,7 +25,6 @@ const decorator = (ComposedComponent) => {
   // });
 
   return class extends Component {
-
     static async getInitialProps(ctx) {
       const { req } = ctx;
       const isServer = !!req;
@@ -41,7 +39,7 @@ const decorator = (ComposedComponent) => {
       return {
         ...pageProps,
         isServer,
-        userAgent,
+        userAgent
       };
     }
 
@@ -53,12 +51,10 @@ const decorator = (ComposedComponent) => {
       return (
         <div>
           <MuiThemeProvider theme={theme}>
-            <ComposedComponent
-              {...this.props}
-            />
+            <ComposedComponent {...this.props} />
           </MuiThemeProvider>
         </div>
-      )
+      );
     }
   };
 };

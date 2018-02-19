@@ -13,9 +13,9 @@ const MyAppBar = ({ theme, children }) => {
   const styles = {
     primaryText: {
       padding: `${theme.spacing.unit}px ${theme.spacing.unit * 2}px`,
-      color: lightPrimaryText,
+      color: lightPrimaryText
     }
-  }
+  };
 
   return (
     <AppBar position="fixed" color="primary">
@@ -25,7 +25,7 @@ const MyAppBar = ({ theme, children }) => {
         </Typography>
       </Toolbar>
     </AppBar>
-  )
-}
+  );
+};
 
 export default withTheme()(MyAppBar);

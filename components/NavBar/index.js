@@ -6,25 +6,25 @@ import Tabs, { Tab } from 'material-ui/Tabs';
 import { changePage } from 'data/store';
 import { connect } from 'react-redux';
 import Pages from 'data/pages';
- 
+
 function TabContainer(props) {
   return <div style={{ padding: 8 * 3 }}>{props.children}</div>;
 }
 
 TabContainer.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
-  },
+    backgroundColor: theme.palette.background.paper
+  }
 });
 
 class BasicTabs extends React.Component {
   state = {
-    value: 0,
+    value: 0
   };
 
   pages = [Pages.PROJECTS, Pages.BLOG, Pages.INTEREST_FEED];
@@ -41,12 +41,8 @@ class BasicTabs extends React.Component {
     return (
       <div className={classes.root}>
         <AppBar position="static">
-          <Tabs centered  fullWidth value={value} onChange={this.handleChange}>
-            {this.pages.map(page => (
-             <Tab 
-              label={page.label} 
-              key={page.label}/>
-            ))}
+          <Tabs centered fullWidth value={value} onChange={this.handleChange}>
+            {this.pages.map(page => <Tab label={page.label} key={page.label} />)}
           </Tabs>
         </AppBar>
       </div>
@@ -55,7 +51,7 @@ class BasicTabs extends React.Component {
 }
 
 BasicTabs.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 const TabsWithStyles = withStyles(styles)(BasicTabs);

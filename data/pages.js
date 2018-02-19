@@ -1,14 +1,14 @@
 export default {
-  PROJECTS: { 
+  PROJECTS: {
     slug: 'projects',
-    label: 'Projects',
+    label: 'Projects'
   },
-  BLOG: { 
+  BLOG: {
     slug: 'blog',
-    label: 'Blog',
+    label: 'Blog'
   },
-  INTEREST_FEED: { 
+  INTEREST_FEED: {
     slug: 'interest_feed',
-    label: 'Interest Feed',
+    label: 'Interest Feed'
   }
-}
+};

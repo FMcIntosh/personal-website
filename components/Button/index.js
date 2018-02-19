@@ -11,10 +11,9 @@ export default ({ href, as, children, type }) => (
       </Button>
     </StyledLink>
   </Link>
-)
-
+);
 
 const StyledLink = styled.a`
   text-decoration: none;
   margin-top: 30px;
-`
+`;
