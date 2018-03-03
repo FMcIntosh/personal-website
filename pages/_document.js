@@ -24,19 +24,20 @@ class MyDocument extends Document {
           */}
           <link rel="manifest" href="/static/manifest.json" />
           {/* PWA primary color */}
-          <meta name="theme-color" content={this.props.stylesContext.theme.palette.primary[500]} />       
+          <meta name="theme-color" content={this.props.stylesContext.theme.palette.primary[500]} />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
           />
-          <style>{`
+          <style>
+            {`
             body, html { 
                 width: 100%;
                 margin: 0;
                 font-family: Roboto, sans-serif;
             }
             `}
-            </style>
+          </style>
         </Head>
         <body>
           <Main />
@@ -82,7 +83,7 @@ MyDocument.getInitialProps = ctx => {
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: context.sheetsRegistry.toString() }}
       />
-    ),
+    )
   };
 };
 
