@@ -17,7 +17,6 @@ const Index = props => {
       <Splash>
         <Title light>Fraser McIntosh</Title>
       </Splash>
-      <Background />
       <Project />
     </div>
   );
@@ -29,15 +28,6 @@ const mapStateToProps = state => {
 
 export default Page(Index, mapStateToProps);
 
-const Background = withTheme()(styled.div`
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: center;
-  background: white;
-`);
 const Wrapper = styled.div`
   width: 60%;
   display: flex;
